@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Cyan">#00FFFF</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="Dark_Yellow">#CCCC00</color>
+    <color name="shadow_color">#003333</color>
+    <color name="Dark_Grey">#333333</color>
+    
+</resources>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:orientation="vertical" >
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/Cyan">
+    </View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/list_header"
+        android:textColor="@color/Cyan"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/shadow_color"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:background="@color/Yellow"
+        android:textSize="@dimen/big_font">
+    </TextView>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/Cyan">
+    </View>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/Yellow">
+    </View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/list_foot"
+        android:textSize="@dimen/big_font"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/shadow_color"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="@color/Yellow"
+        android:background="@color/Cyan"
+        >
+    </TextView> 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/Yellow">
+    </View>
+    
+</LinearLayout>

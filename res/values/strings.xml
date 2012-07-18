@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">Go Fish App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Go Fish App!</string>
+    
+    <!-- Main Page, List View -->
+    <string name="list_header">Gooooo....</string>
+    <string name="list_foot">Fish!</string>
+    
+    <!-- New Game Dialog -->
+    <string name="title_new_game_dialog"></string>
+    <string name="dialog">Begin New Game</string>
+    <string name="select_player">Select a player</string>
+    <string name="select_num_players">Select Number of Computer Players</string>
+    
+    <!--  Game Room -->
+    <string name="title_game_room">Let the fishing begin!</string>
+    <string name="message">Beginning a new game&#8230;</string>
+    <string name="btn_start_game">Start Fishing!</string>
+
+</resources>
