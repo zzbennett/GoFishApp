@@ -93,7 +93,7 @@ public class NewGameDialogActivity extends Activity {
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
 				//Set the number of players
-				text_num_players.setText(progress+"players");
+				text_num_players.setText(progress+" players");
 				num_players = progress;
 			}
 

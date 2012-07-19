@@ -8,6 +8,8 @@ import android.widget.Toast;
 public class GameRoomActivity extends Activity {
 
 	private static final int REQUEST_CODE = 10;
+	private static int num_players = 1;
+	private static String player_name = "Liz";
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// Be sure to call the super class.
@@ -36,9 +38,9 @@ public class GameRoomActivity extends Activity {
 			// build the game as per the user specifications
 			if (data != null) {
 				if (data.hasExtra("Player Name") && data.hasExtra("Num Players")) {
-					String player_name = data.getExtras().getString(
+					player_name = data.getExtras().getString(
 							"Player Name");
-					int num_players = data.getExtras().getInt( "Num Players");
+					num_players = data.getExtras().getInt( "Num Players");
 					Toast.makeText(this, "Playing as " + player_name+" with "+num_players+" computer players.",
 							Toast.LENGTH_SHORT).show();
 				}
