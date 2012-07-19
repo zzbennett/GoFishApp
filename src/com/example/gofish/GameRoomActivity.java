@@ -1,5 +1,4 @@
 package com.example.gofish;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,18 +17,10 @@ public class GameRoomActivity extends Activity {
 		setContentView(R.layout.game_room);
 
 		Intent intent = null;
-		try {
-			intent = new Intent(this, NewGameDialogActivity.class);
-		} catch (Exception e) {
-			System.out.println("WELL THAT DIDN'T WORK 2");
-		}
-		try {
-			startActivityForResult(intent, REQUEST_CODE);
-		} catch (Exception e) {
-
-			System.out.println("WELL THAT DIDN'T WORK 1");
-
-		}
+		intent = new Intent(this, NewGameDialogActivity.class);
+		startActivityForResult(intent, REQUEST_CODE);
+		// need to set up the game room here
+		setUpGameRoom();
 	}
 
 	@Override
@@ -37,14 +28,19 @@ public class GameRoomActivity extends Activity {
 		if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
 			// build the game as per the user specifications
 			if (data != null) {
-				if (data.hasExtra("Player Name") && data.hasExtra("Num Players")) {
-					player_name = data.getExtras().getString(
-							"Player Name");
-					num_players = data.getExtras().getInt( "Num Players");
-					Toast.makeText(this, "Playing as " + player_name+" with "+num_players+" computer players.",
+				if (data.hasExtra("Player Name")
+						&& data.hasExtra("Num Players")) {
+					player_name = data.getExtras().getString("Player Name");
+					num_players = data.getExtras().getInt("Num Players");
+					Toast.makeText(
+							this,
+							"Playing as " + player_name + " with "
+									+ num_players + " computer players.",
 							Toast.LENGTH_SHORT).show();
 				}
 			}
 		}
+	}
+	private void setUpGameRoom() {
 	}
 }
