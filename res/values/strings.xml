@@ -19,5 +19,7 @@
     <string name="title_game_room">Let the fishing begin!</string>
     <string name="message">Beginning a new game&#8230;</string>
     <string name="btn_start_game">Start Fishing!</string>
+    <string name="radio_small_deck">Play with only face cards</string>
+    <string name="radio_big_deck">Play with full deck</string>
 
 </resources>

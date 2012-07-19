@@ -42,13 +42,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/select_player" />
-    <Button 
-        android:id="@+id/btn_start_game"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:text="@string/btn_start_game"></Button>
+  
     <TextView
         android:id="@+id/select_num_players"
         android:layout_marginTop="5dp"
@@ -73,6 +67,28 @@
         android:layout_toRightOf="@id/numplayers_seekbar"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"/>
-    
+    <RadioGroup
+        android:id="@+id/radio_deck_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton 
+            android:id="@+id/radio_big_deck"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_big_deck"/>
+        <RadioButton 
+            android:id="@+id/radio_small_deck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_small_deck"/>
+    </RadioGroup>
+      <Button 
+        android:id="@+id/btn_start_game"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/btn_start_game"></Button>
 
 </RelativeLayout>
