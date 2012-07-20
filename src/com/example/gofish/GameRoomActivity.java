@@ -16,9 +16,11 @@ public class GameRoomActivity extends Activity {
 	private static int num_players = 1;
 	private static String player_name = "Liz";
 	
-	private static Deck deck;
 	private static ArrayList<Player> players;
 	private static Player curPlayer;
+	private static String deck_size = "Big";
+	
+	private static Deck deck;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// Be sure to call the super class.
@@ -94,4 +96,5 @@ public class GameRoomActivity extends Activity {
 			if( deck.nextCard() == null) break;
 		}
 	}
+	/*Please don't break, eclipse!!*/
 }

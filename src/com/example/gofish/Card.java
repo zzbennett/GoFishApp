@@ -50,5 +50,4 @@ public class Card implements Constants {
 		
 		return ret.toString();
 	}
-
 }
