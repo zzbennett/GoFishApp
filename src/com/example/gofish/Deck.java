@@ -31,7 +31,11 @@ public class Deck implements Constants {
 	
 	public Card nextCard(){
 		Random rand = new Random();
+		if(deck.size()>1){
 		return deck.remove(rand.nextInt(deck.size()-1));
+		}
+		else if(deck.size() == 1) return deck.remove(0);
+		else return null;
 	}
 	
 	public String toString(){

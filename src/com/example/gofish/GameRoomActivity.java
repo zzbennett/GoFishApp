@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 public class GameRoomActivity extends Activity {
+	
+	private static Random rand = new Random();
 
 	private static final int REQUEST_CODE = 10;
 	private static int num_players = 1;
@@ -16,6 +18,7 @@ public class GameRoomActivity extends Activity {
 	
 	private static Deck deck;
 	private static ArrayList<Player> players;
+	private static Player curPlayer;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		// Be sure to call the super class.
@@ -49,6 +52,7 @@ public class GameRoomActivity extends Activity {
 		/*once the new game dialog is exited, begin setting up the game room*/
 		setUpGameRoom();
 		setUpDeck();
+		beginGamePlay();
 	}
 	public void setUpGameRoom(){
 		players = new ArrayList<Player>();
@@ -74,9 +78,20 @@ public class GameRoomActivity extends Activity {
 				}
 			}
 		}
-		for( Player player : players){
-			System.out.println(player.toString()+"\n");
+	}
+	public void beginGamePlay(){
+		//choose first player
+		curPlayer = players.get(rand.nextInt(players.size()-1));
+		curPlayer.isTurn = true;
+		
+		//initialize list of other players for each player
+		for(Player player : players )
+			player.addOtherPlayers(players);
+		
+		while(!(deck.deck.isEmpty()) || !(players.get(0).emptyHand)){
+			//let game play ensue!
+			curPlayer.takeTurn();
+			if( deck.nextCard() == null) break;
 		}
-		System.out.println("Deck is \n"+deck.toString());
 	}
 }
