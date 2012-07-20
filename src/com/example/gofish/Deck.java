@@ -1,6 +1,7 @@
 package com.example.gofish;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck implements Constants {
 
@@ -8,7 +9,7 @@ public class Deck implements Constants {
 
 	public Deck(String size) {
 		deck = new ArrayList<Card>();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 1; i < 5; i++) {
 			if (size.equals("Big")) {
 				for (int j = 2; j < 15; j++) {
 					deck.add(new Card(i, j));
@@ -20,6 +21,25 @@ public class Deck implements Constants {
 				}
 			}
 		}
+	}
+	
+	public Card removeCard(int index){
+		
+		return deck.remove(index);
+		
+	}
+	
+	public Card nextCard(){
+		Random rand = new Random();
+		return deck.remove(rand.nextInt(deck.size()-1));
+	}
+	
+	public String toString(){
+		StringBuilder ret = new StringBuilder();
+		for( Card card : deck){
+			ret.append(card.toString()).append("\n");			
+		}
+		return ret.toString();
 	}
 
 }
